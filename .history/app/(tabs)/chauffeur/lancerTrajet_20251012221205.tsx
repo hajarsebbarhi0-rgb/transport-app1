@@ -5,7 +5,7 @@ import { router } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Alert, Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const API_URL = 'http://192.168.2.7:8000/api';
+const API_URL = 'http://192.168.2.23:8000/api';
 
 export default function LancerTrajet() {
   const [enCours, setEnCours] = useState(false);
