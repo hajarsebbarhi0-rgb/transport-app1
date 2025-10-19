@@ -15,7 +15,7 @@ export default function ValidationPresence() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://192.168.2.5:8000/api/eleves")
+    fetch("http://192.168.2.13:8000/api/eleves")
       .then((res) => res.json())
       .then((data) => {
         setEleves(data);

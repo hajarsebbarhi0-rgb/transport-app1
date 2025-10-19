@@ -9,7 +9,7 @@ import MapView, { Marker, Region } from "react-native-maps";
 
 
 
-const API_URL = 'http://192.168.2.5:8000/api';
+const API_URL = 'http://192.168.2.13:8000/api';
 
 // Haversine -> distance en mètres
 function getDistanceFromLatLonInMeters(lat1: number, lon1: number, lat2: number, lon2: number) {

@@ -51,7 +51,7 @@ export default function Profile() {
       if (!token) return Alert.alert("Erreur", "Veuillez vous reconnecter.");
 
       const response = await axios.get<Eleve>(
-        "http://192.168.2.5:8000/api/eleve/profile",
+        "http://192.168.2.13:8000/api/eleve/profile",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -102,7 +102,7 @@ export default function Profile() {
 
       try {
         const response = await axios.post(
-          "http://192.168.2.5:8000/api/eleve/photo",
+          "http://192.168.2.13:8000/api/eleve/photo",
           formData,
           {
             headers: {
@@ -134,7 +134,7 @@ export default function Profile() {
     setSaving(true);
     try {
       const response = await axios.put(
-        "http://192.168.2.5:8000/api/eleve/profile",
+        "http://192.168.2.13:8000/api/eleve/profile",
         { nom, prenom, date_de_naissance: dateDeNaissance, genre, ecole, niveau, email, telephone },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -178,7 +178,7 @@ export default function Profile() {
 
       <View style={styles.photoContainer}>
         <Image
-          source={{ uri: eleve.photo ? `http://192.168.2.5:8000/${eleve.photo}` : undefined }}
+          source={{ uri: eleve.photo ? `http://192.168.2.13:8000/${eleve.photo}` : undefined }}
           style={styles.photo}
         />
         {isEditing && (

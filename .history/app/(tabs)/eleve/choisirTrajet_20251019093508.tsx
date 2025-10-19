@@ -28,7 +28,7 @@ export default function ChoisirTrajet() {
         }
 
         const res = await axios.get(
-          'http://192.168.2.5:8000/api/trajets',
+          'http://192.168.2.13:8000/api/trajets',
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -53,7 +53,7 @@ export default function ChoisirTrajet() {
       }
 
       const res = await axios.get(
-        `http://192.168.2.5:8000/api/trajets/${trajetId}/arrets`,
+        `http://192.168.2.13:8000/api/trajets/${trajetId}/arrets`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -75,7 +75,7 @@ export default function ChoisirTrajet() {
       const token = await AsyncStorage.getItem('userToken');
 
       await axios.put(
-        'http://192.168.2.5:8000/api/eleves/choisir-trajet-arret',
+        'http://192.168.2.13:8000/api/eleves/choisir-trajet-arret',
         {
           trajet_id: selectedTrajet,
           arret_id: selectedArret,

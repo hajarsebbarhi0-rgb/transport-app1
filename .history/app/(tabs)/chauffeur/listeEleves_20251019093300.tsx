@@ -21,7 +21,7 @@ export default function ListeEleves() {
 
         // ⚡ Requête API avec token dans les headers
         const response = await axios.get(
-          'http://192.168.2.5:8000/api/chauffeur/eleves',
+          'http://192.168.2.13:8000/api/chauffeur/eleves',
           {
             headers: {
               Accept: 'application/json',   // ✅ obligatoire

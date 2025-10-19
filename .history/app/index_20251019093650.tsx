@@ -27,7 +27,7 @@ const LoginScreen = () => {
     setLoading(true);
     try {
       // ⚠ Mets ton IP locale ici (IPv4 de ton PC)
-      const response = await axios.post('http://192.168.2.5:8000/api/login', {
+      const response = await axios.post('http://192.168.2.13:8000/api/login', {
         email,
         password,
         role,
