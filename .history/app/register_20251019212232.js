@@ -17,7 +17,7 @@ import {
 const RegisterScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState(''); // ✅ nouveau champ
   const [nom, setNom] = useState('');
   const [prenom, setPrenom] = useState('');
   const [telephone, setTelephone] = useState('');
@@ -32,16 +32,6 @@ const RegisterScreen = () => {
 
     if (password !== confirmPassword) {
       Alert.alert('Erreur', 'Les mots de passe ne correspondent pas.');
-      return;
-    }
-
-    // Validation du mot de passe
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-    if (!passwordRegex.test(password)) {
-      Alert.alert(
-        'Erreur',
-        'Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un chiffre.'
-      );
       return;
     }
 
@@ -138,7 +128,7 @@ const RegisterScreen = () => {
           />
           <TextInput
             style={styles.input}
-            placeholder="Confirmer le mot de passe"
+            placeholder="Confirmer le mot de passe" // ✅ nouveau champ
             placeholderTextColor="#7a6c62"
             onChangeText={setConfirmPassword}
             value={confirmPassword}
