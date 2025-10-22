@@ -48,7 +48,7 @@ const RegisterScreen = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://192.168.2.16:8000/api/register', {
+      const response = await axios.post('http://192.168.2.5:8000/api/register', {
         email,
         password,
         nom,
